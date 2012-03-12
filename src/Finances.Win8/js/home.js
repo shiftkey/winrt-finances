@@ -4,24 +4,50 @@
     var ui = WinJS.UI;
     var nav = WinJS.Navigation;
 
+    function menuLink(e) {
+        e.preventDefault();
+        var link = e.target;
+        nav.navigate(link.href);
+    };
+
+    function showReport(from) {
+        var today = new Date();
+        nav.navigate("/html/reports.html", { start: from, end: today } );
+    };
+
+    function navigateToLastWeek(e) {
+        e.preventDefault();
+        var today = new Date();
+        var lastweek = new Date().setDate(today.getDate() + 7);
+        showReport(lastweek);
+    };
+
+    function navigateToLastMonth(e) {
+        e.preventDefault();
+        var today = new Date();
+        var thismonth = new Date(today.getYear(), today.getMonth(), 1, 0, 0, 0, 0);
+        showReport(thismonth);
+    };
+
+    function navigateToThisYear(e) {
+        e.preventDefault();
+
+        var today = new Date();
+        var startOfYear = new Date(today.getFullYear(), 6, 1, 0, 0, 0, 0); // JS month is 0-11 - July 1
+
+        if (startOfYear > today)
+            startOfYear.setFullYear(startOfYear.getFullYear() - 1);
+
+        showReport(startOfYear);
+    }
+
     ui.Pages.define("/html/home.html", {
         ready: function (element, options) {
-            element.querySelector("#transactions").onclick = function () { nav.navigate("/html/transactions.html"); };
-            element.querySelector("#goals").onclick = function () { nav.navigate("/html/goals.html"); };
-            element.querySelector("#reports").onclick = function () { nav.navigate("/html/reports.html"); };
+            WinJS.Utilities.query(".menu a").listen("click", menuLink, false);
 
-            var today = new Date();
-
-            var lastweek = new Date().setDate(today.getDate() + 7);
-            var thismonth = new Date(today.getYear(), today.getMonth(), 1, 0, 0, 0, 0);
-            var startOfYear = new Date(today.getFullYear(), 6, 1, 0, 0, 0, 0); // JS month is 0-11 - July 1
-
-            if (startOfYear > today)
-                startOfYear.setFullYear(startOfYear.getFullYear() - 1);
-
-            element.querySelector("#lastweek").onclick = function () { nav.navigate("/html/reports.html", { start: thisweek, end: today }); };
-            element.querySelector("#thismonth").onclick = function () { nav.navigate("/html/reports.html", { start: thismonth, end: today }); };
-            element.querySelector("#yeartodate").onclick = function () { nav.navigate("/html/reports.html", { start: startOfYear, end: today }); };
-        },
+            element.querySelector("#lastweek").onclick = navigateToLastWeek;
+            element.querySelector("#thismonth").onclick = navigateToLastMonth;
+            element.querySelector("#yeartodate").onclick = navigateToThisYear;
+        }
     });
 })();
