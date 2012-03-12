@@ -63,6 +63,7 @@
     <Content Include="html\reports.html" />
     <Content Include="html\transactions.html" />
     <Content Include="html\home.html" />
+    <Content Include="images\chart1.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />

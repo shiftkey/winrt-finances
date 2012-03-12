@@ -3,41 +3,61 @@
 <head>
     <meta charset="utf-8">
     <title>home</title>
-
     <link href="//Microsoft.WinJS.0.6/css/ui-dark.css" rel="stylesheet">
     <script src="//Microsoft.WinJS.0.6/js/base.js"></script>
     <script src="//Microsoft.WinJS.0.6/js/ui.js"></script>
-    
     <link href="/css/default.css" rel="stylesheet">
     <link href="/css/home.css" rel="stylesheet">
-
     <script src="/js/data.js"></script>
     <script src="/js/home.js"></script>
-	<script type="text/javascript">WinJS.UI.processAll();</script>
+    <script type="text/javascript">WinJS.UI.processAll();</script>
 </head>
 <body>
-
     <div class="fragment groupeditemspage">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled></button>
-			<div class="panel" style="-ms-grid-column: 2;" >
-			<h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">My Finances</span>
-            </h1>
-			<ul class="menu" style="-ms-grid-column: 2;">
-				<li><a id="reports">Reports</a></li>
-				<li><a id="goals">Goals</a></li>
-				<li><a id="transactions">Transactions</a></li>
-				<li><a class="selected" id="dashboard">Dashboard</a></li>
-			</ul>
-			</div>
+            <div class="panel" style="-ms-grid-column: 2;">
+                <h1 class="titlearea win-type-ellipsis"><span class="pagetitle">My Finances</span>
+                </h1>
+                <ul class="menu" style="-ms-grid-column: 2;">
+                    <li><a id="reports">Reports</a></li>
+                    <li><a id="goals">Goals</a></li>
+                    <li><a id="transactions">Transactions</a></li>
+                    <li><a class="selected" id="dashboard">Dashboard</a></li>
+                </ul>
+            </div>
         </header>
         <section aria-label="Main content" role="main">
-
-        	<div id="currentReports"
-				 data-win-control="WinJS.UI.FlipView">
-        		
-			</div>
+            <div class="notifications">
+				<span class="title">notifications</span>
+				  <ul>
+						<li>item 1</li>
+						<li>item 2</li>
+						<li>item 3</li>
+					</ul>
+				<div>
+					<img src="/images/dismiss.png" />
+					<span class="title">dismiss</span>
+				</div>
+            </div>
+            <div class="panel">
+                <div class="section">
+                    <div class="large">
+                        <img src="/images/chart1.jpg" />
+                    </div>
+                    <div class="actions">
+                        <ul>
+                            <li><a id="lastweek">last week</a></li>
+                            <li><a id="thismonth">this month</a></li>
+                            <li><a id="yeartodate">year to date</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                </div>
+                <div class="section">
+                </div>
+            </div>
         </section>
     </div>
 </body>
