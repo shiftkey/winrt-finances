@@ -64,10 +64,13 @@
     <Content Include="html\transactions.html" />
     <Content Include="html\home.html" />
     <Content Include="images\chart1.jpg" />
+    <Content Include="images\check.png" />
+    <Content Include="images\dismiss.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
+    <Content Include="images\warning.png" />
     <Content Include="js\data\winrt.js" />
     <Content Include="js\goals.js" />
     <Content Include="js\reports.js" />

@@ -165,13 +165,69 @@ section[role=main] .notifications {
     height: 100px;
     background-color: #F8FF00;
     margin-bottom: 20px;
+    color:  black;
+    display: -ms-grid;
+    -ms-grid-columns: 120px 1fr 90px;
+    -ms-grid-rows:  1fr;
+}
+
+section[role=main] .notifications .left {
+    -ms-grid-column: 1;
+    font-size: 24px;
+	margin-left: 10px;
+    font-weight: 500;
+	-ms-grid-row: 1; 
+	-ms-grid-row-span: 1; 
+	-ms-grid-row-align: center;
+}
+
+section[role=main] .notifications .center {
+    -ms-grid-column: 2;
+       overflow-x: auto;
+    overflow-y: hidden;
+    -ms-scroll-rails: none;
+	-ms-grid-row: 1; 
+	-ms-grid-row-span: 1; 
+	-ms-grid-row-align: stretch;
+	-ms-grid-rows: 1fr; -ms-grid-columns: 1fr; display: -ms-grid;
+}
+
+section[role=main] .notifications .right {
+    -ms-grid-column: 3;
+     -ms-grid-row: 1; 
+	-ms-grid-row-span: 1; 
+	-ms-grid-row-align: center;
+	
+}
+
+section[role=main] .notifications ul {
+    list-style-type: none;
+	-ms-grid-row-align: center; 
+	-ms-grid-row: 1; 
+	-ms-grid-column: 1;
+}
+
+section[role=main] .notifications li {
+    display: inline; 
+    margin-right: 30px;
+    font-size: 24pt;
+}
+
+section[role=main] .notifications li.warning:before {
+     content: url('../images/warning.png');
+     margin-right: 10px;
+     margin-top: 5px;
+}
+
+section[role=main] .notifications li.achievement:before {
+     content: url('../images/check.png');
+     margin-right: 10px;
+     margin-top: 5px;
 }
 
 section[role=main] .panel {
     margin-left: 20px;
 }
-
-
 
 section[role=main] .section {
     width: 800px;
@@ -201,3 +257,8 @@ section[role=main] .section {
             font-size: 17pt;
             color: blue;
         }
+
+section[role=main] #dismiss img {
+    
+    height: 80px;
+}

@@ -17,8 +17,7 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled></button>
             <div class="panel" style="-ms-grid-column: 2;">
-                <h1 class="titlearea win-type-ellipsis"><span class="pagetitle">My Finances</span>
-                </h1>
+                <h1 class="titlearea win-type-ellipsis"><span class="pagetitle">My Finances</span></h1>
                 <ul class="menu" style="-ms-grid-column: 2;">
                     <li><a href="/html/transactions.html">Reports</a></li>
                     <li><a href="/html/goals.html">Goals</a></li>
@@ -29,15 +28,18 @@
         </header>
         <section aria-label="Main content" role="main">
             <div class="notifications">
-				<span class="title">notifications</span>
+				<div class="left">
+					<span>notifications</span>
+				</div>
+				<div class="center">
 				  <ul>
-						<li>item 1</li>
-						<li>item 2</li>
-						<li>item 3</li>
+						<li class="warning">your rent is due on thursday</li>
+						<li class="achievement">you've saved enough for that holiday to Japan </li>
+						<li class="warning">something something really long words go here purple monkey dishwasher words go here</li>
 					</ul>
-				<div>
-					<img src="/images/dismiss.png" />
-					<span class="title">dismiss</span>
+				</div>
+				<div class="right">
+					<a id="dismiss"><img src="/images/dismiss.png" /></a>
 				</div>
             </div>
             <div class="panel">
