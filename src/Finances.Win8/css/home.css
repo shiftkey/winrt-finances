@@ -197,10 +197,10 @@ section[role=main] .notifications .right {
      -ms-grid-row: 1; 
 	-ms-grid-row-span: 1; 
 	-ms-grid-row-align: center;
-	
 }
 
 section[role=main] .notifications ul {
+    width: 1600px;
     list-style-type: none;
 	-ms-grid-row-align: center; 
 	-ms-grid-row: 1; 

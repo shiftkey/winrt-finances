@@ -10,52 +10,20 @@
 }
 
 .expenses .grouplist {
-    height: 100%;
     position: relative;
     width: 100%;
     z-index: 0;
+    -ms-grid-column-align: stretch;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-align: stretch;
+    height: 94%;
 }
-
-    .expenses .grouplist .win-groupheader {
-        -ms-grid-columns: 1fr;
-        -ms-grid-rows: auto auto 1fr;
-        display: -ms-grid;
-        height: 100%;
-        margin-left: 0px;
-        margin-right: 70px;
-        padding: 0;
-        width: 480px;
-    }
-
-        .expenses .grouplist .win-groupheader .group-subtitle {
-            -ms-grid-row: 1;
-            margin: 0;
-            margin-bottom: 11px;
-            max-height: 48pt;
-            overflow: hidden;
-            padding-bottom: 4px;
-        }
-
-        .expenses .grouplist .win-groupheader .group-image {
-            -ms-grid-row: 2;
-            background-color: rgba(147, 149, 152, 1);
-            height: 238px;
-            margin: 0;
-            margin-bottom: 20px;
-            width: 480px;
-        }
-
-        .expenses .grouplist .win-groupheader .group-description {
-            -ms-grid-row: 3;
-            margin-bottom: 55px;
-            overflow: hidden;
-        }
-
     .expenses .grouplist .win-item {
         -ms-grid-columns: 1fr 110px;
         -ms-grid-rows: 1fr;
         display: -ms-grid;
-        height: 110px;
+        height: 100px;
         width: 472px;
     }
 
@@ -73,12 +41,14 @@
 
             .expenses .grouplist .win-item .item-info .item-title {
                 margin-top: 4px;
-                max-height: 20px;
+                font-size:  20pt;
+                max-height: 40px;
                 overflow: hidden;
             }
 
             .expenses .grouplist .win-item .item-info .item-subtitle {
                 opacity: 0.6;
+                font-size:  14pt;
             }
 
             .expenses .grouplist .win-item .item-info .item-description {
@@ -145,9 +115,8 @@
 
 section[role=main] .content {
     -ms-grid-columns: 120px 500px 24px 1fr 50px;
-	-ms-grid-rows: 1fr;
+	-ms-grid-rows: 1fr 20px;
     display: -ms-grid;
-    margin-top: 24px;
 }
 
     section[role=main] .content, section[role=main] .content .left, section[role=main] .content .right {
@@ -179,7 +148,7 @@ section[role=main] .content {
         }
 
             section[role=main] .content .right .win-listview {
-                height: 100%;
+                margin-bottom:20px;
             }
 
         #addTransaction {

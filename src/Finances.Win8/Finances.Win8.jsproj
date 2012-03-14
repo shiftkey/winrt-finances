@@ -66,7 +66,10 @@
     <Content Include="images\chart1.jpg" />
     <Content Include="images\check.png" />
     <Content Include="images\dismiss.png" />
+    <Content Include="images\logo-large.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\samplechart.png" />
+    <Content Include="images\samplechart2.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
